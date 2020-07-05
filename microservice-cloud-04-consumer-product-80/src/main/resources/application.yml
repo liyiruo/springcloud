@@ -1,2 +1,13 @@
 server:
   port: 80
+
+
+
+#eureka 服务端配置信息 实例名称 是否注册到eureka 是否被发现  注册到哪里
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka6001.com:6001/eureka,http://eureka6002.com:6002/eureka
