@@ -20,3 +20,16 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 150
+  application:
+    name: microservice-product #这个很重要，这在以后的服务与服务之间相互调用一般都是根据
+
+#如果想把一个模块添加到注册中心，只需要添加eureka客户端依赖，注解 ，设置配置文件
+#eureka 客户端不需要配置实例名
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:6001/eureka  #zone  这个Z 是大写的。
+
+
