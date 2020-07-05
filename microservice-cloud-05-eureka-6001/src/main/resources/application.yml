@@ -15,3 +15,6 @@ eureka:
     service-url: # Eureka客户端与Eureka服务端的交互地址，集群版配置对方的地址，单机版配置自
       #己(如果不配置则默认本机8761端口)
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+  server:
+    enable-self-preservation: false # 禁用自我保护模式 开发阶段禁用，生产上设为true
