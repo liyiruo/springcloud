@@ -8,9 +8,10 @@ server:
 #Eureka相关配置
 eureka:
   instance:
-    hostname:  eureka-6001   #实例的名称
+    hostname:  localhost   #实例的名称
   client:
-    fetch-registry: false
-    register-with-eureka: false
-    service-url:
+    fetch-registry: false  # 服务注册，false表示不将自已注册到Eureka服务中
+    register-with-eureka: false # 服务发现，false表示自己不从Eureka服务中获取注册信息
+    service-url: # Eureka客户端与Eureka服务端的交互地址，集群版配置对方的地址，单机版配置自
+      #己(如果不配置则默认本机8761端口)
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
