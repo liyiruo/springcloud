@@ -1,0 +1,14 @@
+server:
+  port: 6002
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka6001.com:6001/eureka
+
+  instance:
+    hostname: eureka6002.com
+  server:
+    enable-self-preservation: false

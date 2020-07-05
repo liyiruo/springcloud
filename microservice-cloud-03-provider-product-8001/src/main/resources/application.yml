@@ -29,7 +29,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:6001/eureka  #zone  这个Z 是大写的。
+      defaultZone: http://eureka6002.com:6002/eureka, http://eureka6001.com:6001/eureka  #zone  这个Z 是大写的。
       #eureka 客户端配置实例名,页面上就不会在显示IP了
   instance:
     instance-id: ${spring.application.name}:${server.port}  # 指定实例ID,就不会显示主机名了
