@@ -12,7 +12,7 @@ import java.util.List;
  * @author liyiruo
  * //指定调用的服务 MICROSERVICE-PRODUCT
  */
-@FeignClient(value = "MICROSERVICE-PRODUCT")
+@FeignClient(value = "MICROSERVICE-PRODUCT",fallback = ProductClientServiceFallBack.class)
 public interface ProductClientService {
     /**
      * 获取一行数据

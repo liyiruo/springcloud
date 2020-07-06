@@ -11,3 +11,7 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://eureka6001.com:6001/eureka,http://eureka6002.com:6002/eureka
+# 开启熔断保护
+feign:
+  hystrix:
+    enabled: true

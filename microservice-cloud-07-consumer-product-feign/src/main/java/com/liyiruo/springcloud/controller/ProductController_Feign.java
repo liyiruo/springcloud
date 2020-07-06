@@ -3,6 +3,7 @@ package com.liyiruo.springcloud.controller;
 import com.liyiruo.springcloud.entities.Product;
 import com.liyiruo.springcloud.service.ProductClientService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
