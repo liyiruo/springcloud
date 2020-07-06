@@ -21,6 +21,12 @@ public class Product implements Serializable {
      */
     private String dbSource;
 
+    public Product(Long pid, String productName, String dbSource) {
+        this.pid = pid;
+        this.productName = productName;
+        this.dbSource = dbSource;
+    }
+
     public Long getPid() {
         return pid;
     }
@@ -43,5 +49,14 @@ public class Product implements Serializable {
 
     public void setDbSource(String dbSource) {
         this.dbSource = dbSource;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "pid=" + pid +
+                ", productName='" + productName + '\'' +
+                ", dbSource='" + dbSource + '\'' +
+                '}';
     }
 }

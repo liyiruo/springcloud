@@ -25,7 +25,7 @@ public class ProductController_Feign {
         return service.add(product);
     }
 
-    @GetMapping("/consumer/product/{id}")
+    @GetMapping("/consumer/product/get/{id}")
     public Product get(@PathVariable("id") Long id) {
         return service.get(id);
     }

@@ -3,6 +3,7 @@ package com.liyiruo.springcloud.service;
 import com.liyiruo.springcloud.entities.Product;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public interface ProductClientService {
      * @return Product
      */
     @GetMapping("/product/get/{id}")
-    Product get(Long id);
+    Product get(@PathVariable Long id);
 
     /**
      * 获取一组数据
